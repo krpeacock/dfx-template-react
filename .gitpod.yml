@@ -9,7 +9,7 @@ tasks:
       dfx build
       dfx deploy test
       npm start
-  - command: dfx start
+  - command: /home/gitpod/bin/dfx start --background
     name: replica
     openMode: tab-after
 
