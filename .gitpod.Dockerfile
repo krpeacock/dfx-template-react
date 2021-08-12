@@ -11,4 +11,4 @@ RUN wget https://sdk.dfinity.org/install.sh -O /tmp/install-sdk.sh \
 RUN echo "export PATH=/home/gitpod/bin/:$PATH" > ~/.bashrc
 
 # Oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
