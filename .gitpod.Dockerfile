@@ -1,8 +1,8 @@
 FROM gitpod/workspace-full
 
-RUN apt-get update
-RUN apt-get install -y vim tree curl build-essential make gcc sudo less git rsync
-RUN apt-get clean
+RUN sudo apt-get update
+RUN sudo apt-get install -y vim tree curl build-essential make gcc sudo less git rsync
+RUN sudo apt-get clean
 
 # DFX
 RUN echo y | sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
