@@ -17,7 +17,5 @@ RUN . $NVM_DIR/nvm.sh && nvm install stable
 # Rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-RUN dfx start --background --clean
-
 COPY ./files/. .
 
