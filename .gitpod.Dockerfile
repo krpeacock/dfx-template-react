@@ -8,7 +8,7 @@ RUN sudo apt-get clean
 RUN wget https://sdk.dfinity.org/install.sh -O /tmp/install-sdk.sh \
  && sh -c 'yes Y | DFX_VERSION=0.8.0 sh /tmp/install-sdk.sh'
 
-echo "export PATH=/home/gitpod/bin/:$PATH" > ~/.bashrc && source ~/.bashrc
+RUN echo "export PATH=/home/gitpod/bin/:$PATH" > ~/.bashrc && source ~/.bashrc
 
 RUN cd /workspace/dfx-template-react && dfx start --background --clean && dfx build
 
