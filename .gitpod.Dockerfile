@@ -1,5 +1,3 @@
-FROM ubuntu:latest
-
 FROM gitpod/workspace-full
 
 RUN apt-get update
