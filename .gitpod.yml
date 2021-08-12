@@ -2,15 +2,12 @@ image:
   file: .gitpod.Dockerfile
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: dfx setup
-  - init: echo "export PATH=/home/gitpod/bin/:$PATH" > ~/.bashrc
+  - name: environment startup
+  - init: echo "export PATH=/home/gitpod/bin/:$PATH" > ~/.bashrc && source ~/.bashrc
     command: |
-      source ~/.bashrc
+      npm install
       dfx start --background
       dfx deploy hello
-
-  - init: npm install
-    command: |
       npm start
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
