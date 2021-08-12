@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@krpeacock 
-aviate-labs
-/
-workspace
-1
-0
-0
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-workspace/files/setup.sh
-@di-wu
-di-wu Add Dockerfile.
-Latest commit 72e90a2 1 hour ago
- History
- 1 contributor
-32 lines (24 sloc)  628 Bytes
-  
 #!/bin/sh
 
 echo ""
@@ -60,16 +30,3 @@ rsync -qavz /root/ "/home/${name}"
 rsync -qavz /workspace/ "/home/${name}"
 
 exec su - "${name}"
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete

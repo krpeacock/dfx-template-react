@@ -18,7 +18,7 @@ ports:
     onOpen: open-preview
 
 image:
-  file: Dockerfile
+  file: .gitpod.Dockerfile
 vscode:
   extensions:
   - esbenp.prettier-vscode

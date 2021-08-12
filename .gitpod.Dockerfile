@@ -1,7 +1,6 @@
 FROM ubuntu:latest
 
-LABEL MAINTAINER "Quint Daenen <me@di-wu.be>"
-LABEL SOURCE "https://github.com/aviate-labs/workspace"
+FROM gitpod/workspace-full
 
 RUN apt-get update
 RUN apt-get install -y vim tree curl build-essential make gcc sudo less git rsync
@@ -24,4 +23,3 @@ RUN dfx start --background --clean
 
 COPY ./files/. .
 
-ENTRYPOINT ["sh","/setup.sh"]
