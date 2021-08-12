@@ -7,13 +7,10 @@ tasks:
     init: |
       dfx start --background
       dfx deploy hello
+      zsh
       npm install
-    command: |
       npm start
-
-  - name: open app
     command: gp open src/hello_assets/src/App.jsx
-  - command: zsh
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
@@ -24,7 +21,6 @@ ports:
 vscode:
   extensions:
   - esbenp.prettier-vscode
-  - coenraads.bracket-pair-colorizer-2
 github:
   prebuilds:
     # enable for the master/default branch (defaults to true)
