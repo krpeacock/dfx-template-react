@@ -12,6 +12,8 @@ RUN echo "export PATH=/home/gitpod/bin/:$PATH" > ~/.bashrc
 
 WORKDIR /workspace/dfx-template-react
 RUN /usr/bin/bash
+RUN echo $(pwd)
+RUN echo $(which dfx)
 RUN /home/gitpod/bin/dfx start --background --clean
 RUN /home/gitpod/bin/dfx build
 
