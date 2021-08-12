@@ -11,7 +11,7 @@ RUN wget https://sdk.dfinity.org/install.sh -O /tmp/install-sdk.sh \
 RUN echo "export PATH=/home/gitpod/bin/:$PATH" > ~/.bashrc
 
 WORKDIR /workspace/dfx-template-react
-RUN pwd
+RUN /usr/bin/bash
 RUN /home/gitpod/bin/dfx start --background --clean
 RUN /home/gitpod/bin/dfx build
 
