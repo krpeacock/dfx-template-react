@@ -5,15 +5,22 @@ tasks:
   - name: environment startup
   - init: echo "export PATH=/home/gitpod/bin/:$PATH" > ~/.bashrc && source ~/.bashrc
     command: |
-      npm install
       dfx start --background
       dfx deploy hello
-      npm start
+
+  - name: open app
+    command: gp open src/hello_assets/src/App.jsx
+
+  - name: start server
+    init: npm install
+    command: npm start
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
-    onOpen: open-preview
+    onOpen: notify
+  - port: 8000
+    onOpen: ignore
 vscode:
   extensions:
   - esbenp.prettier-vscode
