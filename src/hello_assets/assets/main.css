@@ -9,7 +9,7 @@ img {
     display: block;
     margin: auto;
 }
-section {
+form {
     display: flex;
     flex-flow: row wrap;
     max-width: 40vw;

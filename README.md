@@ -29,6 +29,8 @@ You will need to set up dfx for it, so run the following steps:
     * confirm "y"
 * export PATH=/home/gitpod/bin/:$PATH
 * dfx start --background; dfx deploy hello
+* sudo apt-get install rsync -y
+* npm install
 * npm start
 
 
