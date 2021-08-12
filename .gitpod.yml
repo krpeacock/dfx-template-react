@@ -4,9 +4,9 @@ image:
 tasks:
   - init: npm install
     command: |
-      gp await-port 8000
-      dfx canister create --all
-      dfx build
+      echo "export PATH=/home/gitpod/bin/:$PATH" > ~/.bashrc
+      "source ~/.bashrc"
+      dfx start --background
       dfx deploy test
       npm start
   - command: /home/gitpod/bin/dfx start --background
