@@ -20,6 +20,18 @@ dfx help
 dfx config --help
 ```
 
+## Running with GitPod
+Start running this project in your browser by visiting it in [Gitpod](https://gitpod.io/#https://github.com/krpeacock/dfx-template-react)
+
+You will need to set up dfx for it, so run the following steps:
+
+* sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
+    * confirm "y"
+* export PATH=/home/gitpod/bin/:$PATH
+* dfx start --background; dfx deploy hello
+* npm start
+
+
 ## Running the project locally
 
 If you want to test your project locally, you can use the following commands:
