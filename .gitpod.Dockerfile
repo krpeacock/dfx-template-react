@@ -5,8 +5,8 @@ RUN sudo apt-get install -y vim tree curl build-essential make gcc sudo less git
 RUN sudo apt-get clean
 
 # DFX
-RUN echo y | sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
-RUN chmod +x /usr/local/bin/dfx
+RUN wget https://sdk.dfinity.org/install.sh -O /tmp/install-sdk.sh \
+ && sh -c 'yes Y | DFX_VERSION=0.8.0 sh /tmp/install-sdk.sh'
 RUN export PATH=/home/gitpod/bin/:$PATH
 
 # NVM & Node
