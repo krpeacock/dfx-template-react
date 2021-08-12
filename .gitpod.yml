@@ -17,7 +17,7 @@ tasks:
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
-    onOpen: notify
+    onOpen: open-preview
   - port: 8000
     onOpen: ignore
 vscode:
