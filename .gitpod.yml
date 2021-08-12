@@ -1,14 +1,25 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: Install Dfx
-  - init: sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
-    command: echo 'y'
-
-  - name: Install Packages
   - init: npm install
+    command: |
+      gp await-port 8000
+      dfx canister create --all
+      dfx build
+      dfx deploy test
+      npm start
+  - command: dfx start
+    name: replica
+    openMode: tab-after
 
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
     onOpen: open-preview
+
+image:
+  file: Dockerfile
+vscode:
+  extensions:
+  - esbenp.prettier-vscode
+  - coenraads.bracket-pair-colorizer-2
