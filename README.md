@@ -1,5 +1,7 @@
 # hello
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/krpeacock/dfx-template-react)
+
 Welcome to your new hello project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
@@ -23,16 +25,7 @@ dfx config --help
 ## Running with GitPod
 Start running this project in your browser by visiting it in [Gitpod](https://gitpod.io/#https://github.com/krpeacock/dfx-template-react)
 
-You will need to set up dfx for it, so run the following steps:
-
-* sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
-    * confirm "y"
-* export PATH=/home/gitpod/bin/:$PATH
-* dfx start --background; dfx deploy hello
-* sudo apt-get install rsync -y
-* npm install
-* npm start
-
+The app will automatically start up DFX, deploy the Hello canister, and start up a frontend development server for you.
 
 ## Running the project locally
 
