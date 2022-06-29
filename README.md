@@ -1,4 +1,6 @@
-# hello
+# hello template
+
+To get started, find and replace "hello" with the name of your project in the files and filenames. Then, run `npm install`, and `npm run dev` to run your app locally.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/krpeacock/dfx-template-react)
 
