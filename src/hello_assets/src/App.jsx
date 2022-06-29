@@ -1,4 +1,5 @@
 import * as React from 'react';
+import logo from "../assets/logo.png";
 import { hello } from "../../declarations/hello"
 
 const App = () => {
@@ -20,16 +21,18 @@ const App = () => {
     }
 
     return (
-        <main>
-            <img src="logo.png" alt="DFINITY logo" />
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Enter your name: &nbsp;</label>
-                <input id="name" alt="Name" type="text" ref={inputRef} />
-                <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button>
-            </form>
-            <section id="greeting">{greeting}</section>
-        </main>
-    )
+      <main>
+        <img src={logo} alt="DFINITY logo" />
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Enter your name: &nbsp;</label>
+          <input id="name" alt="Name" type="text" ref={inputRef} />
+          <button id="clickMeBtn" type="submit" disabled={pending}>
+            Click Me!
+          </button>
+        </form>
+        <section id="greeting">{greeting}</section>
+      </main>
+    );
 }
 
 export default App;
