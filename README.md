@@ -34,12 +34,21 @@ The app will automatically start up DFX, deploy the Hello canister, and start up
 If you want to test your project locally, you can use the following commands:
 
 ```bash
-# Starts the replica, running in the background
-dfx start --background
-
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
+npm run dev
 ```
+
+Alternately, step by step, you can run 
+
+```bash
+dfx start --background --clean
+dfx deploy hello
+node setupEnv.js
+npm run generate
+npx parcel src/hello_assets/src/index.html
+```
+
+If you change the names of canisters, be sure to update those new path names in `package.json` and `dfx.json`.
+
 
 Once the job completes, your application will be available at `http://localhost:8000?canisterId={asset_canister_id}`.
 
